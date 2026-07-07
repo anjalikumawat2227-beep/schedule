@@ -60,7 +60,7 @@ position: relative;
     color:white;
 }
 /* NIGHT THEME */
-.dashboard.dark{
+body.dark .dashboard{
   background-image:url("./image/nigththeme.jpg");
 }
 
@@ -963,4 +963,233 @@ position: relative;
     border-radius:10px;
 
     cursor:pointer;
+}
+/* =========================
+   DARK THEME
+========================= */
+
+body.dark{
+    background:#121212;
+    color:white;
+}
+
+/* ALL SECTIONS */
+
+body.dark #schedule-page,
+body.dark #goals-page,
+body.dark #task-page,
+body.dark #timer-page,
+body.dark #motivation-page{
+    background:#121212;
+    color:white;
+}
+
+/* HEADINGS */
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p,
+body.dark label{
+    color:white;
+}
+
+/* FORMS */
+
+body.dark input,
+body.dark textarea,
+body.dark select{
+    background:#1f1f1f;
+    color:white;
+    border:1px solid #444;
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder{
+    color:#bbb;
+}
+
+/* BUTTONS */
+
+body.dark button{
+    background:#2c2c2c;
+    color:white;
+}
+
+body.dark button:hover{
+    background:#444;
+}
+body.dark .schedule-card{
+    background:#1f1f1f;
+    color:white;
+    border:1px solid #333;
+}
+
+body.dark .delete-btn{
+    background:#ff4d4d;
+}
+body.dark .goal-form{
+    background:#1f1f1f;
+}
+
+body.dark .goal-card{
+    background:#1f1f1f;
+    color:white;
+    border:1px solid #333;
+}
+
+body.dark .goal-card.completed{
+    background:#183018;
+}
+body.dark .task-form{
+    background:#1f1f1f;
+}
+
+body.dark .task-card{
+    background:#1f1f1f;
+    color:white;
+    border:1px solid #333;
+}
+
+body.dark .task-card.completed{
+    background:#183018;
+}
+
+body.dark .task-card.important{
+    border-left:5px solid gold;
+}
+body.dark .timer-container{
+    background:#121212;
+}
+
+body.dark .timer-box{
+    background:#1f1f1f;
+    color:white;
+    box-shadow:none;
+}
+
+body.dark #timerDisplay{
+    color:#4da3ff;
+}
+body.dark .quote-card{
+    background:#1f1f1f;
+    color:white;
+    border:1px solid #333;
+}
+
+body.dark .quote-author{
+    color:#aaa;
+}
+body.dark .modal-overlay{
+    background:rgba(0,0,0,0.7);
+}
+
+body.dark .task-modal{
+    background:#1f1f1f;
+    color:white;
+}
+/* =========================
+   TASK PAGE DARK MODE
+========================= */
+
+body.dark #tasks-page{
+    background:#121212;
+    color:white;
+}
+
+/* Left Form Box */
+
+body.dark .task-form-container{
+    background:#1e1e1e;
+    color:white;
+    box-shadow:0 8px 25px rgba(0,0,0,.5);
+}
+
+/* Heading */
+
+body.dark .task-form-container h2{
+    color:white;
+}
+
+/* Inputs */
+
+body.dark .task-form-container input,
+body.dark .task-form-container textarea{
+    background:#2b2b2b;
+    color:white;
+    border:1px solid #444;
+}
+
+body.dark .task-form-container input::placeholder,
+body.dark .task-form-container textarea::placeholder{
+    color:#aaa;
+}
+
+/* Important checkbox text */
+
+body.dark .important-box{
+    color:white;
+}
+
+/* Add Task Button */
+
+body.dark #addTaskBtn{
+    background:linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+    color:white;
+}
+
+body.dark #addTaskBtn:hover{
+    transform:translateY(-2px);
+}
+
+/* Right Side Task List */
+
+body.dark .tasks-list{
+    background:#1e1e1e;
+    border-radius:20px;
+    padding:20px;
+}
+
+/* Task Cards */
+
+body.dark .task-card{
+    background:#2b2b2b;
+    color:white;
+    border:1px solid #444;
+}
+
+/* Important Task */
+
+body.dark .task-card.important{
+    border-left:5px solid gold;
+}
+
+/* Completed Task */
+
+body.dark .task-card.completed{
+    opacity:.7;
+    text-decoration:line-through;
+}
+
+/* Buttons inside card */
+
+body.dark .task-card button{
+    background:#3a3a3a;
+    color:white;
+    border:none;
+}
+
+body.dark .task-card button:hover{
+    background:#555;
+}
+
+/* Back Button */
+
+body.dark #taskBackBtn{
+    background:#2b2b2b;
+    color:white;
 }

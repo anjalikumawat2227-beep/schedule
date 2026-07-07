@@ -33,16 +33,27 @@ const timerPage = document.querySelector("#timer-page");
 const taskBtn =document.querySelector("#task");
 const tasksPage = document.querySelector("#tasks-page");
 const taskBackBtn = document.querySelector("#taskBackBtn")
+const theme = localStorage.getItem("theme");
 
 
-toggleBtn.addEventListener("click",()=>{
-      dashboard.classList.toggle("dark");
-         if (dashboard.classList.contains("dark")) {
+    toggleBtn.addEventListener("click",()=>{
+    document.body.classList.toggle("dark");
+    if(document.body.classList.contains("dark")){
+        localStorage.setItem("theme","dark");
         toggleBtn.textContent = "☀️";
-    } else {
+    }else{
+        localStorage.setItem("theme","light");
         toggleBtn.textContent = "🌙";
     }
-})
+
+});
+
+
+
+if(theme === "dark"){
+    document.body.classList.add("dark");
+    toggleBtn.textContent = "☀️";
+}
 updateDateTime()
 weatherInfo()
 addScheduleCard();
