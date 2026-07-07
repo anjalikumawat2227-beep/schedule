@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <section class="dashboard">
+
+    <!-- Header -->
+    <header class="navbar">
+
+      <h2>Schedule Planner</h2>
+
+      <!-- Theme Toggle -->
+      <button id="themeToggle" class="theme-btn">
+        🌙
+      </button>
+
+    </header>
+
+
+
+    <!-- Background Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Weather Card -->
+    <section class="weather-card">
+
+      <p id="date">4 July, 2026</p>
+
+      <div class="card-content">
+
+        <div class="left">
+          <h1 id="day"></h1>
+          <h2 id="time"></h2>
+          <p id="location"></p>
+        </div>
+
+        <div class="right">
+          <h2 id="temp"></h2>
+          <p id="condition"></p>
+
+          <div class="details">
+            <span id="humidity"></span>
+            <span id="wind"></span>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Right Navigation -->
+    <aside class="nav-icons">
+
+      <button class="circle-btn" id="schedule" data-page="schedule">
+        📅
+      </button>
+
+      <button class="circle-btn" id="task" data-page="notes">
+        📝
+      </button>
+
+      <button class="circle-btn" id="goals" data-page="goals">
+        🎯
+      </button>
+
+      <button class="circle-btn" id="motivationBtn" data-page="motivation">
+        ⚙️
+      </button>
+      <button class="circle-btn" id="timer" data-page="timer">
+      ⌚
+      </button>
+
+    </aside>
+  </section>
+  <section id="schedule-page" class="hidden">
+
+    <div class="schedule-container">
+
+      <div class="schedule-header">
+
+        <h1>My Schedule Planner</h1>
+
+        <button id="addScheduleBtn">
+          + Add schedule
+        </button>
+
+      </div>
+
+      <!-- JS yaha cards add karega -->
+      <div class="task-list">
+
+      </div>
+
+    </div>
+
+  <div class="modal-overlay hidden">
+
+    <form id="taskForm" class="task-form">
+
+        <div class="form-header">
+            <h2>Add New Task</h2>
+
+            <button type="button" id="closeBtn">
+                ✕
+            </button>
+        </div>
+
+        <div class="input-group">
+            <label for="taskName">Task Name</label>
+
+            <input
+            name="taskName"
+                type="text"
+                id="taskName"
+                placeholder="Enter task name"  
+            >
+        </div>
+
+        <div class="input-group">
+            <label for="startTime">Start Time</label>
+
+            <input
+            name="startTime"
+                type="time"
+                id="startTime"
+            
+            >
+        </div>
+        <div class="input-group">
+            <label for="endTime">End Time</label>
+
+            <input
+            name="endTime"
+                type="time"
+                id="endTime"
+              
+            >
+        </div>
+
+        <div class="form-buttons">
+
+            <button
+                type="button"
+                id="cancelBtn"
+            >
+                Cancel
+            </button>
+
+            <button
+                type="submit"
+                id="saveBtn"
+            >
+                Save Task
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+    <button id="backBtn">Back</button>
+
+  </section>
+<section id="goals-page" class="hidden">
+
+    <div class="goals-container">
+
+        <div class="goal-form">
+
+            <h2>Daily Goals</h2>
+
+            <input
+                type="text"
+                id="goalTitle"
+                placeholder="Enter goal title"
+            >
+
+            <textarea
+                id="goalDesc"
+                placeholder="Enter your goal details"
+            ></textarea>
+
+            <button id="addGoalBtn">
+                Add Goal
+            </button>
+
+        </div>
+
+        <div class="goals-list">
+
+        </div>
+
+    </div>
+    <button id="goalbackBtn">Back</button>
+</section>
+
+<section id="timer-page" class="hidden">
+
+    <button class="back-btn" id="timerBackBtn">
+        ← Back
+    </button>
+
+    <div class="timer-container">
+
+        <h1>Study With Me 📚</h1>
+
+        <div class="mode-buttons">
+
+            <button id="workBtn" class="active-mode">
+                Work Session
+            </button>
+
+            <button id="breakBtn">
+                Break Session
+            </button>
+
+        </div>
+
+        <div class="timer-display">
+
+            <span id="minutes">25</span>
+            :
+            <span id="seconds">00</span>
+
+        </div>
+
+        <div class="timer-controls">
+
+            <button id="startBtn">
+                Start
+            </button>
+
+            <button id="pauseBtn">
+                Pause
+            </button>
+
+            <button id="resetBtn">
+                Reset
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="tasks-page" class="hidden">
+
+    <button id="taskBackBtn" class="back-btn">
+        ← Back
+    </button>
+
+    <div class="tasks-container">
+
+        <!-- LEFT -->
+
+        <div class="task-form-container">
+
+            <h2>Your Personalised Task List</h2>
+            <form id="addTaskForm">
+                <input
+                    type="text"
+                    id="taskTitle"
+                    placeholder="Enter Task"
+                    required
+                    name="taskTitle"
+                >
+
+                <textarea
+                    id="taskDesc"
+                    placeholder="Enter Details"
+                    name="taskDesc"
+                ></textarea>
+
+                <label class="important-box">
+
+                    <input
+                        type="checkbox"
+                        id="importantTask"
+                        name="importantTask"
+                    >
+
+                    Mark as Important
+
+                </label>
+
+                <button type="submit" id="addTaskBtn">
+                    Add Task
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="tasks-list">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="motivation-page" class="hidden">
+
+    <div class="quote-container">
+
+        <h3>Quote of the Day</h3>
+
+        <p id="quoteText">
+            Loading quote...
+        </p>
+
+        <span id="quoteAuthor">
+            - Author
+        </span>
+
+    </div>
+
+    <button id="motivationBackBtn" class="back-btn">
+        Back
+    </button>
+
+</section>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>
