@@ -5,7 +5,7 @@ import { scheduleCard } from "./scheduleCard.js";
 import { initGoals, renderGoals } from "./goals.js";
 import { updateDisplay } from "./timer.js";
 import { addTask} from "./task.js";
-import { renderTasks } from "./taskRender.js";
+import { renderTasks } from "./taskrender.js";
 import { getQuote }from "./motivation.js";
 
 const motivationBtn =document.getElementById("motivationBtn");
