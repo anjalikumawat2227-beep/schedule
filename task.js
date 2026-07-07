@@ -1,4 +1,4 @@
-import { renderTasks } from "./taskRender.js";
+import { renderTasks } from "./taskrender.js";
 const addTaskForm = document.querySelector("#addTaskForm");
 const tasksList = document.querySelector(".tasks-list");
 const addBtn = document.querySelector("#addTaskBtn");
